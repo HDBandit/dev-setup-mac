@@ -213,3 +213,11 @@ prompt_context() {
 ```script
 brew install imagemagick
 ```
+
+```script
+brew install hub
+```
+
+## Scripts
+In order to make automatic pull requests from the terminal, this [script](https://github.com/HDBandit/dev-setup-mac/blob/master/scripts/pr.sh) fits perfectly.
+Please configure company and repository.
