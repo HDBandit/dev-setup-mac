@@ -25,6 +25,12 @@ More information about Homebrew [here](https://brew.sh/index_es)
 brew cask install sublime-text
 ```
 
+### Htop
+
+```script
+brew install htop
+```
+
 ## Shell
 
 ### iTerm2
@@ -58,6 +64,8 @@ rm -rf fonts
 ```
 
 More information about config [here](https://github.com/ohmyzsh/ohmyzsh)
+
+IMPORTANT!! After installation configure on iTerm Profiles > Text > Font > Meslo LG DZ for Powerline
 
 ### Plugins Zsh
 
@@ -167,9 +175,6 @@ plugins=(... z)
 
 ### Aliases on zshrc file
 ```script
-# show all the history
-alias cmdh="h | fzf"
-
 # show all the directories visited on the current terminal session
 alias dirsh="dirs -v | fzf"
 
@@ -191,4 +196,20 @@ alias sshdir="cd ~/.ssh"
 # zsh current version
 alias zversion="zsh --version"
 ```
+
+### Modify prompt zsh
+
+Add at the end of your <strong>.zshrc</strong> the following code
+```script
+prompt_context() {
+  # Custom (Random emoji)
+  emojis=("🔥💀🔥")
+  RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+  prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
+}
+```
+
+## Other
+```script
 brew install imagemagick
+```

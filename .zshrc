@@ -7,7 +7,6 @@ plugins=(git osx last-working-dir history sudo web-search z)
 source $ZSH/oh-my-zsh.sh
 
 # Gerard aliases
-alias cmdh="h | fzf"
 alias dirsh="dirs -v | fzf"
 alias update="source ~/.zshrc"
 alias runp='f() {lsof -i :$1};f'
@@ -24,3 +23,9 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+prompt_context() {
+  # Custom (Random emoji)
+  emojis=("🔥💀🔥")
+  prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
+}
